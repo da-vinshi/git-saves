@@ -1,0 +1,5 @@
+Credentials cache: API:41C62103-A637-4ACE-B4BE-28C080E815C6
+        Principal: lerodrig@42BARCELONA.COM
+
+  Issued                Expires               Principal
+Oct 25 16:06:20 2021  Oct 26 02:06:17 2021  krbtgt/42BARCELONA.COM@42BARCELONA.COM
