@@ -1,0 +1,5 @@
+<identifier>=<value>
+    To create an enviroment variable
+
+groups <user>
+    To get all the groups a user belongs to
