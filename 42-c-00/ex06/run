@@ -1,2 +1,2 @@
-gcc -Wall -Wextra -Werror main.c ft_print_comb.c
+gcc -Wall -Wextra -Werror main.c ft_print_comb2.c
 ./a.out

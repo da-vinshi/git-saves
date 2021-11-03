@@ -6,7 +6,7 @@ void w(char a, char b, char c){
 	write(1, &c, 1);
 }
 
-void ft_print_comb(void){
+void ft_print_comb2(void){
 	char x = '0';
 	char y = '1'; 
 	char z = '2';
