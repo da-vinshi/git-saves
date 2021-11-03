@@ -1,8 +1,8 @@
-void	ft_is_negative();
+void	ft_print_comb();
 
 int	main()
 {
-	ft_is_negative(3);
+	ft_print_comb();
 
 	return 0;
 }

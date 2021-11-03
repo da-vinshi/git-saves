@@ -1,2 +1,2 @@
-gcc -Wall -Wextra -Werror main.c ft_is_negative.c
+gcc -Wall -Wextra -Werror main.c ft_print_comb.c
 ./a.out
