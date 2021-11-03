@@ -1,39 +1,37 @@
 #include <libc.h>
 
-void	ft_print_comb(void)
-{
-	// char o1[1] = "0";
-	// char o2[2] = "00";
+void w(char a, char b, char c){
+	write(1, &a, 1);
+	write(1, &b, 1);
+	write(1, &c, 1);
+}
 
-	// write(1, &o2, sizeof(o2));	
-	
-	// int a, b, c;
-	// a = b = c = '0';
-
-	int a = 0;
-	int b = 1;
-
+void ft_print_comb(void){
 	char x = '0';
-	char y = '1';
+	char y = '1'; 
+	char z = '2';
 
-	char s[2] = ", ";
+	char sp[2] = ", ";
+	char ln = '\n';
 
-	while (a < 10){
-		// write(1, &x, 1);
+	while (x <= '7'){
 		
-		while(b < 10){
-			write(1, &x, 1);
-			write(1, &y, 1);
-			
-			b++;
+		y = x + 1;
+		while(y <= '8'){
+		
+			z = y + 1; 
+			while(z <= '9'){
+				w(x, y, z);		
+				
+				if (x != '7' || y != '8' || z != '9')
+					write(1, sp, 2);
+				else 
+					write(1, &ln, 1);
+
+				z++;
+			}
 			y++;
-
-			write(1, s, 2);
 		}
-
-		write(1, s, 2);
-
-		a++;
 		x++;
 	}
-}
+}	
