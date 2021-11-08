@@ -1,37 +1,53 @@
-#include <libc.h>
+#include <unistd.h>
 
-void w(char a, char b, char c){
+void print2(char a, char b)
+{
 	write(1, &a, 1);
 	write(1, &b, 1);
-	write(1, &c, 1);
 }
 
-void ft_print_comb2(void){
-	char x = '0';
-	char y = '1'; 
-	char z = '2';
+void ft_putint(int num, int max)
+{
+	char uni;
+	char dec;
 
-	char sp[2] = ", ";
-	char ln = '\n';
-
-	while (x <= '7'){
-		
-		y = x + 1;
-		while(y <= '8'){
-		
-			z = y + 1; 
-			while(z <= '9'){
-				w(x, y, z);		
-				
-				if (x != '7' || y != '8' || z != '9')
-					write(1, sp, 2);
-				else 
-					write(1, &ln, 1);
-
-				z++;
-			}
-			y++;
-		}
-		x++;
+	if (num <= 9)
+	{
+		uni = num + 48;
+		print2('0', uni);
 	}
-}	
+	else if (num <= max)
+	{
+		uni = (num % 10) + 48;
+		dec = (num / 10) + 48;
+		print2(dec, uni);
+	}
+}
+
+void ft_catint(int first, int second)
+{
+	ft_putint(first, 98);
+	write(1, " ", 1);
+	ft_putint(second, 99);
+	if (first != 98 || second != 99)
+		print2(',', ' ');
+}
+
+void ft_print_comb2(void)
+{
+	int f;
+	int s;
+
+	f = 0;
+	while (f <= 98)
+	{
+		s = f + 1;
+		while (s <= 99)
+		{
+			ft_catint(f, s);
+			s++;
+		}
+		f++;
+	}
+}
+
