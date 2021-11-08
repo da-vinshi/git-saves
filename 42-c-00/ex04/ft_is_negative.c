@@ -1,9 +1,11 @@
-#include <libc.h>
+#include <unistd.h>
 
 void	ft_is_negative(int n)
 {
-	char P = 'P';
-	char N = 'N';
+	char P;
+       	P = 'P';
+	char N;
+	N = 'N';
 
 	if(n < 0)
 	{		
