@@ -1,4 +1,4 @@
-#include <libc.h>
+#include <unistd.h>
 
 void w(char a, char b, char c){
 	write(1, &a, 1);
@@ -7,9 +7,12 @@ void w(char a, char b, char c){
 }
 
 void ft_print_comb(void){
-	char x = '0';
-	char y = '1'; 
-	char z = '2';
+	char x;
+       	x = '0';
+	char y; 
+	y = '1'; 
+	char z;
+       	z = '2';
 
 	char sp[2] = ", ";
 	char ln = '\n';
