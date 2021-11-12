@@ -1,40 +1,34 @@
 #include <unistd.h>
 
-void w(char a, char b, char c){
+void	print3(char a, char b, char c)
+{
 	write(1, &a, 1);
 	write(1, &b, 1);
 	write(1, &c, 1);
+	if (a != '7' || b != '8' || c != '9')
+		write(1, ", ", 2);
 }
 
-void ft_print_comb(void){
-	char x;
-       	x = '0';
-	char y; 
-	y = '1'; 
-	char z;
-       	z = '2';
+void	ft_print_comb(void)
+{
+	char a;
+	char b;
+	char c;
 
-	char sp[2] = ", ";
-	char ln = '\n';
-
-	while (x <= '7'){
-		
-		y = x + 1;
-		while(y <= '8'){
-		
-			z = y + 1; 
-			while(z <= '9'){
-				w(x, y, z);		
-				
-				if (x != '7' || y != '8' || z != '9')
-					write(1, sp, 2);
-				else 
-					write(1, &ln, 1);
-
-				z++;
+	a = '0';
+	while (a <= '7')
+	{
+		b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				print3(a, b, c);
+				c++;
 			}
-			y++;
+			b++;
 		}
-		x++;
+		a++;
 	}
-}	
+}
